@@ -12,7 +12,7 @@ This is a Next.js template which can be deployed to GitHub Pages as a static sit
 Congratulations! You should have a URL like:
 
 ```bash
-https://mikes74.github.io/dj-dan-next-page/
+https://<github-user-name>.github.io/<github-project-name>/
 ```
 
 For more information, see our [deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying/static-exports).
