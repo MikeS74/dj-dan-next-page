@@ -1,4 +1,3 @@
-/* styles.js */
 import css from "styled-jsx/css";
 import { colors } from "./colors";
 
@@ -13,7 +12,7 @@ export const tourScheduleLayout = css`
 export const tourDateContainer = css`
   .tour-date-container {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
     position: relative;
     background-color: ${colors.charcoal};
@@ -30,7 +29,7 @@ export const tourDetails = css`
     flex: 1;
     gap: 6px;
     color: ${colors.offWhite};
-    padding: 12px;
+    padding: 12px 12px 12px 16px;
     overflow: hidden;
   }
 `;
@@ -42,10 +41,10 @@ export const dateDetails = css`
     justify-content: center;
     gap: 4px;
     width: 79px;
-    max-height: 72px;
+    height: 72px;
     color: ${colors.charcoal};
     background-color: ${colors.offWhite};
-    border-radius: 16px;
+    /* border-radius: 16px; */
     padding: 4px 8px;
   }
 `;
@@ -65,13 +64,12 @@ export const dateDisplay = css`
 export const month = css`
   .month {
     font-size: 13px;
-    font-weight: 900;
   }
 `;
 
 export const day = css`
   .day {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
@@ -140,6 +138,7 @@ export const cityAndTicketRow = css`
     align-items: flex-start;
     justify-content: space-between;
     gap: 8px;
+    margin-top: -1px;
   }
 `;
 
