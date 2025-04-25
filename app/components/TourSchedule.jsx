@@ -1,6 +1,6 @@
 "use client";
 
-// import TicketLink from './TicketLink';
+import TicketLink from "./TicketLink";
 import {
   tourScheduleLayout,
   tourDateContainer,
@@ -147,7 +147,7 @@ const TourDate = ({ data, $showMobileLayout }) => {
             ) : null}
             {/* ============= */}
           </Row>
-          {/* TICKET LINK GOES HERE */}
+          {hasTix && <TicketLink $url={data.ticketUrl} />}
         </CityAndTicketRow>
         {/* MOBILE */}
         <Row>
