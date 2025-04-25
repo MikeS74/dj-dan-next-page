@@ -42,8 +42,15 @@ const TourDetails = ({ children }) => (
   </div>
 );
 
-const DateDetails = ({ children }) => (
-  <div className="date-details">
+const DateDetails = ({ children, isMobile }) => (
+  <div
+    className="date-details"
+    style={{
+      borderRadius: isMobile ? 10 : 16,
+      marginTop: isMobile ? 8 : 0,
+      marginLeft: isMobile ? 8 : 0,
+    }}
+  >
     {children}
     <style jsx>{dateDetails}</style>
   </div>
@@ -128,7 +135,7 @@ const TourDate = ({ data, $showMobileLayout }) => {
   const hasTix = Boolean(data?.ticketUrl);
   return (
     <TourDateContainer>
-      <DateDetails>
+      <DateDetails isMobile={$showMobileLayout}>
         <DayOfWeek>{data.dayOfWeek}</DayOfWeek>
         <Divider />
         <Month>{monthDayArr[0]?.slice(0, 3)}</Month>
