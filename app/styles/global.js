@@ -21,7 +21,7 @@ export default css.global`
     animation: gradient 25s ease infinite;
     /* solid background fallback */
     background-color: hsl(225 18% 18%);
-    height: 100vh;
+    height: calc(100vh + 200px);
     max-width: 100vw;
     overflow-x: hidden;
   }

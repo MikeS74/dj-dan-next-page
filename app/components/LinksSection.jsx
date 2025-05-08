@@ -13,9 +13,11 @@ const linksStyles = {
   container: {
     display: "flex",
     flexWrap: "wrap",
+    position: "sticky",
+    bottom: 0,
     justifyContent: "center",
-    borderRadius: 6,
-    backgroundColor: colors.blackOpaque,
+    background: colors.linksGradient,
+    borderTop: `1px solid ${colors.pinkOpaque}`,
     padding: "12px 12px 24px 12px",
   },
   button: {
