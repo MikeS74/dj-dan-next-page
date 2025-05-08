@@ -5,8 +5,10 @@ import useMediaQuery from "./helpers/useMediaQuery";
 import HeaderDesktop from "./components/HeaderDesktop";
 import HeaderMobile from "./components/HeaderMobile";
 import TourSchedule from "./components/TourSchedule";
+import LinksSection from "./components/LinksSection";
+import { colors } from "./styles/colors";
 
-const mainStackGap = 48;
+const mainStackGap = 32;
 
 const ResponsiveHeader = () => {
   return (
@@ -28,12 +30,15 @@ const HeaderLayout = (props) => {
       {props.children}
       <style jsx>{`
         .header-layout {
-          margin-top: 32px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding-top: 32px;
+          padding-bottom: 24px;
           margin-right: auto;
-          margin-bottom: ${props.$showMobileLayout
-            ? "40px"
-            : `${mainStackGap}px`};
-          margin-left: auto;
+          margin-bottom: ${mainStackGap}px;
+          background-color: ${colors.blackOpaque};
         }
       `}</style>
     </div>
@@ -50,6 +55,7 @@ const MainContent = (props) => {
           flex-direction: column;
           gap: ${mainStackGap}px;
           width: 100%;
+          height: 100%;
           max-width: 560px;
           margin: 0 auto;
           padding: 0 16px;
@@ -63,19 +69,24 @@ const MainContent = (props) => {
 const PageLayout = () => {
   const showMobileLayout = useMediaQuery("(max-width: 620px)");
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        position: "relative",
+        height: "100%",
+      }}
+    >
       <HeaderLayout $showMobileLayout={showMobileLayout}>
         {showMobileLayout ? <ResponsiveHeader /> : <HeaderDesktop />}
       </HeaderLayout>
       <MainContent>
         <TourSchedule $showMobileLayout={showMobileLayout} />
-        {/* <div
-          style={{ width: "100%", height: 80, backgroundColor: "#222222" }}
-        /> */}
         <style jsx global>
           {globalStyles}
         </style>
       </MainContent>
+      <LinksSection />
     </div>
   );
 };
