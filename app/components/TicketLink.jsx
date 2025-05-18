@@ -9,6 +9,7 @@ const LinkRow = (props) => (
       .link-row {
         display: flex;
         align-items: flex-start;
+        gap: 2px;
       }
     `}</style>
   </div>
@@ -19,7 +20,7 @@ const IconArrowUpRight = () => (
     xmlns="http://www.w3.org/2000/svg"
     width="16"
     height="16"
-    viewBox="0 0 24 24"
+    viewBox="0 -4 24 24"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -36,18 +37,21 @@ const TicketLink = ({ $url }) => {
   return (
     <a href={$url} target="_blank" rel="noopener noreferrer">
       <LinkRow>
-        Get Tickets
+        Tickets
         <IconArrowUpRight />
       </LinkRow>
       <style jsx>{`
         a {
+          position: relative;
+          bottom: 4px;
           padding-top: 4px;
           font-size: 14px;
-          color: ${colors.lightGrapefruit};
+          color: ${colors.linkBlue};
           font-weight: 600;
-          line-height: 1.2;
+          line-height: 1.3;
           white-space: nowrap;
-          text-decoration: none;
+          text-decoration: underline;
+          text-underline-position: under;
           cursor: pointer;
         }
       `}</style>

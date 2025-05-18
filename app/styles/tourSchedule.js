@@ -1,23 +1,27 @@
 import css from "styled-jsx/css";
 import { colors } from "./colors";
 
+const dateTileHeight = "72px";
+
 export const tourScheduleLayout = css`
   .tour-schedule-layout {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    margin-bottom: 32px;
   }
 `;
 
 export const tourDateContainer = css`
   .tour-date-container {
     display: flex;
-    /* align-items: center; */
+    flex-direction: column;
+    min-height: ${dateTileHeight};
     width: 100%;
     position: relative;
     background-color: ${colors.charcoal};
-    border: 1px solid ${colors.dimWhite};
-    border-radius: 18px;
+    border: 1px solid grey;
+    border-radius: 10px;
     overflow: hidden;
   }
 `;
@@ -27,9 +31,10 @@ export const tourDetails = css`
     display: flex;
     flex-direction: column;
     flex: 1;
+    justify-content: center;
     gap: 6px;
     color: ${colors.offWhite};
-    padding: 12px 12px 12px 16px;
+    padding: 12px;
     overflow: hidden;
   }
 `;
@@ -39,12 +44,11 @@ export const dateDetails = css`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
     width: 79px;
-    height: 72px;
+    height: ${dateTileHeight};
     color: ${colors.charcoal};
     background-color: ${colors.offWhite};
-    /* border-radius: 16px; */
+    border-radius: 10px;
     padding: 4px 8px;
   }
 `;
@@ -135,10 +139,10 @@ export const venue = css`
 export const cityAndTicketRow = css`
   .city-and-ticket-row {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 8px;
-    margin-top: -1px;
+    padding: 0 12px 12px 12px;
   }
 `;
 
@@ -153,7 +157,7 @@ export const comingSoon = css`
     background-color: ${colors.charcoal};
     border: 1px solid grey;
     padding: 16px;
-    border-radius: 18px;
+    border-radius: 10px;
   }
 `;
 

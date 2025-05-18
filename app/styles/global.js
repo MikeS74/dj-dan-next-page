@@ -20,8 +20,7 @@ export default css.global`
     background-size: 400% 400%;
     animation: gradient 25s ease infinite;
     /* solid background fallback */
-    background-color: hsl(295 18% 18%);
-    height: calc(100vh + 200px);
+    background-color: hsl(225 18% 18%);
     max-width: 100vw;
     overflow-x: hidden;
   }

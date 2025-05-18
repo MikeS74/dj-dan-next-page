@@ -1,13 +1,63 @@
 [
   {
+    "dayOfWeek": "",
+    "date": "May 21-25",
+    "isDateRange": "true",
+    "year": "2025",
+    "city": "Buena Vista Lake, CA",
+    "venue": "",
+    "eventTitle": "Lightning In A Bottle",
+    "ticketUrl": "https://www.tixr.com/groups/dolab/events/lightning-in-a-bottle-2025-107167"
+  },
+  {
+    "dayOfWeek": "Saturday",
+    "date": "June 7",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Las Vegas, NV",
+    "venue": "Terrace Afterhours",
+    "eventTitle": "",
+    "ticketUrl": ""
+  },
+  {
+    "dayOfWeek": "Friday",
+    "date": "June 20",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Toronto, ON, Canada",
+    "venue": "Wiggle Room",
+    "eventTitle": "Apt 20 Years of House",
+    "ticketUrl": "https://wiggleroomtoronto.com/events/"
+  },
+  {
+    "dayOfWeek": "Tuesday",
+    "date": "June 24",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Huntington Beach, CA",
+    "venue": "The Circle OC",
+    "eventTitle": "True House Tuesdays",
+    "ticketUrl": "https://www.eventbrite.com/e/true-house-tuesdays-with-dj-dan-tickets-1366521756359"
+  },
+  {
     "dayOfWeek": "Saturday",
     "date": "June 28",
     "isDateRange": "false",
     "year": "2025",
     "city": "New Orleans, LA",
     "venue": "Metropolitan",
-    "eventTitle": "Back to the Palace 2",
+    "eventTitle": "Back To The Palace 2",
     "ticketUrl": "https://wl.seetickets.us/event/Back-to-the-Palace-2-NEW-ORLEANS/640630"
+  },
+  {
+    "dayOfWeek": "Friday",
+    "date": "July 4",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Los Angeles, CA",
+    "venue": "Certified Groovers",
+    "eventTitle": "Put That Record Back On",
+    "ticketUrl": "https://ra.co/events/2172437"
   },
   {
     "dayOfWeek": "Saturday ",
@@ -18,5 +68,25 @@
     "venue": "The Phoenix Hotel",
     "eventTitle": "Organic",
     "ticketUrl": "https://www.eventbrite.com/e/organic-poolside-tickets-1252451960529?aff=oddtdtcreator&fbclid=IwZXh0bgNhZW0CMTEAAR6-pWI82NkBZVKukOJXMOYOGARNgRlYMalH-2srpc0AsAlf3AOBEfTfd0UIGw_aem_re8ng7ZiT16o-kCDZKquKA"
+  },
+  {
+    "dayOfWeek": "",
+    "date": "August 19-26",
+    "isDateRange": "true",
+    "year": "2025",
+    "city": "Berlin, Germany",
+    "venue": "",
+    "eventTitle": "",
+    "ticketUrl": ""
+  },
+  {
+    "dayOfWeek": "",
+    "date": "September 5-7",
+    "isDateRange": "true",
+    "year": "2025",
+    "city": "Ninilchik, AK",
+    "venue": "",
+    "eventTitle": "Sacred Acre",
+    "ticketUrl": "https://www.tixr.com/groups/sacredacre/events/sacred-acre-124279"
   }
 ]

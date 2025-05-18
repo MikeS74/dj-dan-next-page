@@ -20,6 +20,7 @@ import {
 } from "../styles/tourSchedule";
 import tourDates from "../../data/tour-dates.json";
 import { splitAtFirstNumber } from "../helpers/splitAtFirstNumber";
+import { colors } from "../styles/colors";
 
 const TourScheduleLayout = ({ children }) => (
   <div className="tour-schedule-layout">
@@ -42,15 +43,8 @@ const TourDetails = ({ children }) => (
   </div>
 );
 
-const DateDetails = ({ children, isMobile }) => (
-  <div
-    className="date-details"
-    style={{
-      borderRadius: isMobile ? 10 : 16,
-      marginTop: isMobile ? 8 : 0,
-      marginLeft: isMobile ? 8 : 0,
-    }}
-  >
+const DateDetails = ({ children, hasDayOfWeek }) => (
+  <div className="date-details" style={{ gap: hasDayOfWeek ? 4 : 8 }}>
     {children}
     <style jsx>{dateDetails}</style>
   </div>
@@ -130,53 +124,47 @@ const ComingSoon = ({ children }) => (
 
 const TourDate = ({ data, $showMobileLayout }) => {
   const monthDayArr = splitAtFirstNumber(data?.date);
+  const hasDayOfWeek = data.isDateRange === "false";
   const hasVenue = Boolean(data?.venue);
   const hasEventTitle = Boolean(data?.eventTitle);
   const hasTix = Boolean(data?.ticketUrl);
   return (
-    <TourDateContainer>
-      <DateDetails isMobile={$showMobileLayout}>
-        <DayOfWeek>{data.dayOfWeek}</DayOfWeek>
-        <Divider />
-        <Month>{monthDayArr[0]?.slice(0, 3)}</Month>
-        <Day>{monthDayArr[1]}</Day>
-      </DateDetails>
-      <TourDetails>
-        <CityAndTicketRow>
-          <Row>
-            <City>{data?.city}</City>
-            {/* DESKTOP */}
-            {hasVenue && !$showMobileLayout ? (
-              <>
-                &#183;
-                <Venue>{data.venue}</Venue>
-              </>
-            ) : null}
-            {/* ============= */}
-          </Row>
-          {hasTix && <TicketLink $url={data.ticketUrl} />}
-        </CityAndTicketRow>
-        {/* MOBILE */}
-        <Row>
-          {hasVenue && $showMobileLayout ? (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <div>
+        <DateDetails hasDayOfWeek={hasDayOfWeek}>
+          {hasDayOfWeek ? (
             <>
-              <Venue>{data.venue}</Venue>
+              <DayOfWeek>{data.dayOfWeek}</DayOfWeek>
+              <Divider />
             </>
           ) : null}
-          {/* ============= */}
-          {/* DESKTOP */}
-          {hasEventTitle && !$showMobileLayout ? (
-            <EventTitle>{data.eventTitle}</EventTitle>
-          ) : null}
-          {/* ============= */}
-        </Row>
-        {/* MOBILE */}
-        {hasEventTitle && $showMobileLayout ? (
-          <EventTitle>{data.eventTitle}</EventTitle>
+          <Month>{monthDayArr[0]?.slice(0, 3)}</Month>
+          <Day>{monthDayArr[1]}</Day>
+        </DateDetails>
+      </div>
+      <span
+        style={{ width: 12, height: 2, backgroundColor: colors.offWhite }}
+      />
+      <TourDateContainer>
+        <div style={{ display: "flex" }}>
+          <TourDetails>
+            <City>{data?.city}</City>
+            {hasVenue ? <Venue>{data.venue}</Venue> : null}
+          </TourDetails>
+        </div>
+        {hasEventTitle || hasTix ? (
+          <CityAndTicketRow>
+            {hasEventTitle ? <EventTitle>{data.eventTitle}</EventTitle> : null}
+            {hasTix && <TicketLink $url={data.ticketUrl} />}
+          </CityAndTicketRow>
         ) : null}
-        {/* ============= */}
-      </TourDetails>
-    </TourDateContainer>
+      </TourDateContainer>
+    </div>
   );
 };
 
@@ -193,6 +181,7 @@ const TourSchedule = ({ $showMobileLayout }) => {
         );
       })}
       <ComingSoon>More dates TBA...</ComingSoon>
+      <div style={{ width: 10, height: 48 }} />
     </TourScheduleLayout>
   );
 };

@@ -55,7 +55,7 @@ const MainContent = (props) => {
           flex-direction: column;
           gap: ${mainStackGap}px;
           width: 100%;
-          height: 100%;
+          min-height: 100vh;
           max-width: 560px;
           margin: 0 auto;
           padding: 0 16px;
