@@ -17,6 +17,7 @@ export const colors = {
   blackOpaque: "#00000024",
   lightGrapefruit: "hsl(15 50% 80%)",
   lightBlue: "#b3d2e6",
+  linkBlue: "#7fddff",
   pink: "#e1b3e6",
   pinkOpaque: "rgb(198 162 202 / 40%)",
   snuff: "#e8cfec",
