@@ -43,8 +43,8 @@ const TourDetails = ({ children }) => (
   </div>
 );
 
-const DateDetails = ({ children, isMobile }) => (
-  <div className="date-details">
+const DateDetails = ({ children, hasDayOfWeek }) => (
+  <div className="date-details" style={{ gap: hasDayOfWeek ? 4 : 8 }}>
     {children}
     <style jsx>{dateDetails}</style>
   </div>
@@ -124,6 +124,7 @@ const ComingSoon = ({ children }) => (
 
 const TourDate = ({ data, $showMobileLayout }) => {
   const monthDayArr = splitAtFirstNumber(data?.date);
+  const hasDayOfWeek = data.isDateRange === "false";
   const hasVenue = Boolean(data?.venue);
   const hasEventTitle = Boolean(data?.eventTitle);
   const hasTix = Boolean(data?.ticketUrl);
@@ -135,9 +136,13 @@ const TourDate = ({ data, $showMobileLayout }) => {
       }}
     >
       <div>
-        <DateDetails isMobile={$showMobileLayout}>
-          <DayOfWeek>{data.dayOfWeek}</DayOfWeek>
-          <Divider />
+        <DateDetails hasDayOfWeek={hasDayOfWeek}>
+          {hasDayOfWeek ? (
+            <>
+              <DayOfWeek>{data.dayOfWeek}</DayOfWeek>
+              <Divider />
+            </>
+          ) : null}
           <Month>{monthDayArr[0]?.slice(0, 3)}</Month>
           <Day>{monthDayArr[1]}</Day>
         </DateDetails>

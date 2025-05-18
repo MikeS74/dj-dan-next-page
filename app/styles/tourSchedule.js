@@ -44,7 +44,6 @@ export const dateDetails = css`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
     width: 79px;
     height: ${dateTileHeight};
     color: ${colors.charcoal};
