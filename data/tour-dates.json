@@ -1,15 +1,5 @@
 [
   {
-    "dayOfWeek": "",
-    "date": "May 21-25",
-    "isDateRange": "true",
-    "year": "2025",
-    "city": "Buena Vista Lake, CA",
-    "venue": "",
-    "eventTitle": "Lightning In A Bottle",
-    "ticketUrl": "https://www.tixr.com/groups/dolab/events/lightning-in-a-bottle-2025-107167"
-  },
-  {
     "dayOfWeek": "Saturday",
     "date": "June 7",
     "isDateRange": "false",
@@ -48,6 +38,16 @@
     "venue": "Metropolitan",
     "eventTitle": "Back To The Palace 2",
     "ticketUrl": "https://wl.seetickets.us/event/Back-to-the-Palace-2-NEW-ORLEANS/640630"
+  },
+  {
+    "dayOfWeek": "Thursday",
+    "date": "July 3",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "West Hollywood, CA",
+    "venue": "Hotel Ziggy",
+    "eventTitle": "InStereo We Trust",
+    "ticketUrl": "https://www.eventbrite.com/e/instereo-we-trust-tickets-1377741504929"
   },
   {
     "dayOfWeek": "Friday",
