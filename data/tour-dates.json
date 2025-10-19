@@ -1,92 +1,102 @@
 [
   {
-    "dayOfWeek": "Saturday",
-    "date": "June 7",
+    "dayOfWeek": "Friday",
+    "date": "October 24",
     "isDateRange": "false",
     "year": "2025",
-    "city": "Las Vegas, NV",
-    "venue": "Terrace Afterhours",
+    "city": "Denver, CO",
+    "venue": "Tracks",
+    "eventTitle": "",
+    "ticketUrl": "https://tracksdenver.com/event/21-dj-dan-returns-to-denver/"
+  },
+  {
+    "dayOfWeek": "Wednesday",
+    "date": "November 12",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Fairfax, VA",
+    "venue": "Auld Shebeen",
     "eventTitle": "",
     "ticketUrl": ""
   },
   {
     "dayOfWeek": "Friday",
-    "date": "June 20",
-    "isDateRange": "false",
-    "year": "2025",
-    "city": "Toronto, ON, Canada",
-    "venue": "Wiggle Room",
-    "eventTitle": "Apt 20 Years of House",
-    "ticketUrl": "https://wiggleroomtoronto.com/events/"
-  },
-  {
-    "dayOfWeek": "Tuesday",
-    "date": "June 24",
-    "isDateRange": "false",
-    "year": "2025",
-    "city": "Huntington Beach, CA",
-    "venue": "The Circle OC",
-    "eventTitle": "True House Tuesdays",
-    "ticketUrl": "https://www.eventbrite.com/e/true-house-tuesdays-with-dj-dan-tickets-1366521756359"
-  },
-  {
-    "dayOfWeek": "Saturday",
-    "date": "June 28",
-    "isDateRange": "false",
-    "year": "2025",
-    "city": "New Orleans, LA",
-    "venue": "Metropolitan",
-    "eventTitle": "Back To The Palace 2",
-    "ticketUrl": "https://wl.seetickets.us/event/Back-to-the-Palace-2-NEW-ORLEANS/640630"
-  },
-  {
-    "dayOfWeek": "Thursday",
-    "date": "July 3",
-    "isDateRange": "false",
-    "year": "2025",
-    "city": "West Hollywood, CA",
-    "venue": "Hotel Ziggy",
-    "eventTitle": "InStereo We Trust",
-    "ticketUrl": "https://www.eventbrite.com/e/instereo-we-trust-tickets-1377741504929"
-  },
-  {
-    "dayOfWeek": "Friday",
-    "date": "July 4",
-    "isDateRange": "false",
-    "year": "2025",
-    "city": "Los Angeles, CA",
-    "venue": "Certified Groovers",
-    "eventTitle": "Put That Record Back On",
-    "ticketUrl": "https://ra.co/events/2172437"
-  },
-  {
-    "dayOfWeek": "Saturday ",
-    "date": "August 16",
+    "date": "November 14",
     "isDateRange": "false",
     "year": "2025",
     "city": "San Francisco, CA",
-    "venue": "The Phoenix Hotel",
-    "eventTitle": "Organic",
-    "ticketUrl": "https://www.eventbrite.com/e/organic-poolside-tickets-1252451960529?aff=oddtdtcreator&fbclid=IwZXh0bgNhZW0CMTEAAR6-pWI82NkBZVKukOJXMOYOGARNgRlYMalH-2srpc0AsAlf3AOBEfTfd0UIGw_aem_re8ng7ZiT16o-kCDZKquKA"
+    "venue": "",
+    "eventTitle": "House of Legends",
+    "ticketUrl": ""
   },
   {
-    "dayOfWeek": "",
-    "date": "August 19-26",
-    "isDateRange": "true",
+    "dayOfWeek": "Friday",
+    "date": "November 28",
+    "isDateRange": "false",
     "year": "2025",
-    "city": "Berlin, Germany",
-    "venue": "",
+    "city": "McAllen, TX",
+    "venue": "La Bandida Vivo",
+    "eventTitle": "",
+    "ticketUrl": "https://www.facebook.com/events/1997251281049224/"
+  },
+  {
+    "dayOfWeek": "Saturday",
+    "date": "November 29",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Los Angeles, CA",
+    "venue": "Jungle Hollywood - Coco & Friends",
+    "eventTitle": "",
+    "ticketUrl": "https://www.facebook.com/events/25475936272007945"
+  },
+  {
+    "dayOfWeek": "Saturday",
+    "date": "December 6",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Chicago, IL",
+    "venue": "Smart Bar",
+    "eventTitle": "",
+    "ticketUrl": "https://www.etix.com/ticket/p/57223355/"
+  },
+  {
+    "dayOfWeek": "Friday",
+    "date": "December 26",
+    "isDateRange": "false",
+    "year": "2025",
+    "city": "Portland, OR",
+    "venue": "Nova PDX",
     "eventTitle": "",
     "ticketUrl": ""
   },
   {
-    "dayOfWeek": "",
-    "date": "September 5-7",
-    "isDateRange": "true",
-    "year": "2025",
-    "city": "Ninilchik, AK",
+    "dayOfWeek": "Thursday",
+    "date": "January 1",
+    "isDateRange": "false",
+    "year": "2026",
+    "city": "San Francisco, CA",
     "venue": "",
-    "eventTitle": "Sacred Acre",
-    "ticketUrl": "https://www.tixr.com/groups/sacredacre/events/sacred-acre-124279"
+    "eventTitle": "Breakfast of Champions",
+    "ticketUrl": ""
+  },
+  {
+    "dayOfWeek": "Friday",
+    "date": "January 16",
+    "isDateRange": "false",
+    "year": "2026",
+    "city": "Sturbridge, MA",
+    "venue": "",
+    "eventTitle": "Tropical Dreams",
+    "ticketUrl": ""
+  },
+  {
+    "dayOfWeek": "Saturday",
+    "date": "February 21",
+    "isDateRange": "false",
+    "year": "2026",
+    "city": "Spokane, WA",
+    "venue": "The District Bar",
+    "eventTitle": "",
+    "ticketUrl": ""
   }
 ]
