@@ -1,6 +1,7 @@
 "use client";
 
 import TicketLink from "./TicketLink";
+import DanPhoto from "./DanPhoto";
 import {
   tourScheduleLayout,
   tourDateContainer,
@@ -16,6 +17,7 @@ import {
   eventTitle,
   venue,
   cityAndTicketRow,
+  paragraphContainer,
   comingSoon,
 } from "../styles/tourSchedule";
 import tourDates from "../../data/tour-dates.json";
@@ -115,6 +117,13 @@ const CityAndTicketRow = ({ children }) => (
   </div>
 );
 
+const ParagraphContainer = ({ children }) => (
+  <div className="paragraph-container">
+    {children}
+    <style jsx>{paragraphContainer}</style>
+  </div>
+);
+
 const ComingSoon = ({ children }) => (
   <div className="coming-soon">
     {children}
@@ -122,47 +131,67 @@ const ComingSoon = ({ children }) => (
   </div>
 );
 
-const TourDate = ({ data, $showMobileLayout }) => {
-  const monthDayArr = splitAtFirstNumber(data?.date);
-  const hasDayOfWeek = data.isDateRange === "false";
-  const hasVenue = Boolean(data?.venue);
-  const hasEventTitle = Boolean(data?.eventTitle);
-  const hasTix = Boolean(data?.ticketUrl);
+const TourDate = () => {
   return (
     <div
       style={{
         display: "flex",
-        alignItems: "center",
+        flexDirection: "column",
       }}
     >
-      <div>
-        <DateDetails hasDayOfWeek={hasDayOfWeek}>
-          {hasDayOfWeek ? (
-            <>
-              <DayOfWeek>{data.dayOfWeek}</DayOfWeek>
-              <Divider />
-            </>
-          ) : null}
-          <Month>{monthDayArr[0]?.slice(0, 3)}</Month>
-          <Day>{monthDayArr[1]}</Day>
-        </DateDetails>
+      <DanPhoto />
+      <div style={{ display: "flex" }}>
+        <TourDetails>
+          <City>Wherrett Family Statement:</City>
+        </TourDetails>
       </div>
-      <span
-        style={{ width: 12, height: 2, backgroundColor: colors.offWhite }}
-      />
       <TourDateContainer>
-        <div style={{ display: "flex" }}>
-          <TourDetails>
-            <City>{data?.city}</City>
-            {hasVenue ? <Venue>{data.venue}</Venue> : null}
-          </TourDetails>
-        </div>
-        {hasEventTitle || hasTix ? (
-          <CityAndTicketRow>
-            {hasEventTitle ? <EventTitle>{data.eventTitle}</EventTitle> : null}
-            {hasTix && <TicketLink $url={data.ticketUrl} />}
-          </CityAndTicketRow>
-        ) : null}
+        <ParagraphContainer>
+          We are profoundly touched by the incredible outpouring of love and
+          flood of tributes and memories from Daniel’s friends and fans. Seeing
+          the joy and inspiration he brought to so many has been a source of
+          great comfort for our family. While many knew him for his creative
+          contributions to the world, to us, he was simply Danny—a son, brother,
+          uncle, cousin—whose greatest gift to the world was the quiet grace he
+          extended to everyone he met.
+          <br />
+          <br />
+          There is a sense of peace in knowing Daniel passed away in his sleep
+          of natural causes, enveloped by the familiar tranquility of the home
+          he loved. Daniel lived for the authentic moments that make life
+          beautiful. He had a laugh so big and infectious it would fill the
+          house and had a way of leaving you in stitches every single time you
+          saw him. Whether he was sketching fashion designs or meticulously
+          organizing his growing record collection, his passion for art was
+          evident from an early age. His imagination seemed to have no limits.
+          He was a gourmet in the kitchen, a lover of animals, and a person for
+          whom kindness was as natural as breathing. Danny’s loving spirit lives
+          on in every act of kindness, every shared laugh, and every moment of
+          genuine connection.
+          <br />
+          <br />
+          We will be holding a small, private family ceremony to honour his
+          beautiful spirit and life. We kindly ask for privacy as we navigate
+          this immense loss and celebrate the extraordinary legacy he leaves
+          behind.
+          <br />
+          <br />~ The Wherrett Family
+        </ParagraphContainer>
+      </TourDateContainer>
+      <div style={{ display: "flex" }}>
+        <TourDetails>
+          <City>2 ways to donate in Dan's honor:</City>
+        </TourDetails>
+      </div>
+      <TourDateContainer>
+        <CityAndTicketRow>
+          <TicketLink $url="https://donor.musicares.org/-/XGGFSLHQ">
+            MusiCares
+          </TicketLink>
+          <TicketLink $url="https://animalrescuecorps.givecloud.co/donate">
+            ARC Animal Rescue
+          </TicketLink>
+        </CityAndTicketRow>
       </TourDateContainer>
     </div>
   );
@@ -171,16 +200,7 @@ const TourDate = ({ data, $showMobileLayout }) => {
 const TourSchedule = ({ $showMobileLayout }) => {
   return (
     <TourScheduleLayout>
-      {tourDates.map((td) => {
-        return (
-          <TourDate
-            data={td}
-            $showMobileLayout={$showMobileLayout}
-            key={`${td?.date}${td?.city}`}
-          />
-        );
-      })}
-      <ComingSoon>More dates TBA...</ComingSoon>
+      <TourDate $showMobileLayout={$showMobileLayout} />
       <div style={{ width: 10, height: 48 }} />
     </TourScheduleLayout>
   );

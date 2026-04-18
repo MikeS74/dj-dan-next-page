@@ -16,7 +16,6 @@ export const tourDateContainer = css`
   .tour-date-container {
     display: flex;
     flex-direction: column;
-    min-height: ${dateTileHeight};
     width: 100%;
     position: relative;
     background-color: ${colors.charcoal};
@@ -32,9 +31,8 @@ export const tourDetails = css`
     flex-direction: column;
     flex: 1;
     justify-content: center;
-    gap: 6px;
     color: ${colors.offWhite};
-    padding: 12px;
+    padding: 24px 0 16px 0;
     overflow: hidden;
   }
 `;
@@ -103,9 +101,8 @@ export const row = css`
 
 export const city = css`
   .city {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 500;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -139,10 +136,23 @@ export const venue = css`
 export const cityAndTicketRow = css`
   .city-and-ticket-row {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 0 12px 12px 12px;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+  }
+`;
+
+export const paragraphContainer = css`
+  .paragraph-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    gap: 16px;
+    padding: 16px;
   }
 `;
 
@@ -160,9 +170,3 @@ export const comingSoon = css`
     border-radius: 10px;
   }
 `;
-
-// export const button = css`
-//   button {
-//     color: hotpink;
-//   }
-// `;

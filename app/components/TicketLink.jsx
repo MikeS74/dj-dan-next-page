@@ -33,11 +33,11 @@ const IconArrowUpRight = () => (
   </svg>
 );
 
-const TicketLink = ({ $url }) => {
+const TicketLink = ({ $url, children }) => {
   return (
     <a href={$url} target="_blank" rel="noopener noreferrer">
       <LinkRow>
-        Tickets
+        {children}
         <IconArrowUpRight />
       </LinkRow>
       <style jsx>{`
@@ -45,7 +45,7 @@ const TicketLink = ({ $url }) => {
           position: relative;
           bottom: 4px;
           padding-top: 4px;
-          font-size: 14px;
+          font-size: 16px;
           color: ${colors.linkBlue};
           font-weight: 600;
           line-height: 1.3;

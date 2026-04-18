@@ -34,10 +34,10 @@ const HeaderLayout = (props) => {
           flex-direction: column;
           align-items: center;
           width: 100%;
-          padding-top: 32px;
-          padding-bottom: 24px;
+          padding-top: 16px;
+          padding-bottom: 12px;
           margin-right: auto;
-          margin-bottom: ${mainStackGap}px;
+          margin-bottom: 16px;
           background-color: ${colors.blackOpaque};
         }
       `}</style>
@@ -78,10 +78,34 @@ const PageLayout = () => {
       }}
     >
       <HeaderLayout $showMobileLayout={showMobileLayout}>
-        {showMobileLayout ? <ResponsiveHeader /> : <HeaderDesktop />}
+        <em style={{ fontWeight: "300" }}>in loving memory of</em>
+        <span
+          style={{
+            display: "flex",
+            alignItems: "center",
+            fontSize: 28,
+            fontWeight: 800,
+            letterSpacing: "-1px",
+            marginTop: 8,
+          }}
+        >
+          DJ Dan
+        </span>
+        <span
+          style={{
+            display: "flex",
+            alignItems: "center",
+            fontSize: 12,
+            letterSpacing: "1.2px",
+            marginTop: 8,
+            opacity: 0.4,
+          }}
+        >
+          s ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈ ⚈
+        </span>
       </HeaderLayout>
       <MainContent>
-        <TourSchedule $showMobileLayout={showMobileLayout} />
+        <TourSchedule $showMobile Layout={showMobileLayout} />
         <style jsx global>
           {globalStyles}
         </style>
